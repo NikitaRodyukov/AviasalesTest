@@ -1,6 +1,6 @@
 import Ticket from '../ticket/ticket'
 
-import './tickets.scss'
+import classes from './tickets.module.scss'
 
 export default function Tickets() {
   return (
@@ -10,7 +10,7 @@ export default function Tickets() {
       <Ticket />
       <Ticket />
       <Ticket />
-      <button type="button" className="show-more">
+      <button type="button" className={classes['show-more']}>
         Показать еще 5 билетов!
       </button>
     </div>
