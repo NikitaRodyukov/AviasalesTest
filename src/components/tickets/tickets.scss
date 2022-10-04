@@ -1,0 +1,22 @@
+.tickets{
+
+
+  .show-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    
+    background: #2196F3;
+    border-radius: 5px;
+
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+  }
+}

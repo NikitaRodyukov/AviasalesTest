@@ -1,0 +1,27 @@
+.app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px 0;
+  font-family: 'Open Sans';
+  font-style: normal;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.logo{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.main-content{
+  max-width: 600px;
+}

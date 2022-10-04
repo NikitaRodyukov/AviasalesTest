@@ -1,0 +1,53 @@
+.way{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-right: 35px;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    &__header{
+        font-weight: 400;
+        color: #A0B0B9;
+    }
+
+    &__value{
+        font-size: 14px;
+        line-height: 21px;
+        color: #4A4A4A;
+    }
+
+    .duration
+    {
+        &__header{
+        font-weight: 400;
+        color: #A0B0B9;
+        }
+
+        &__value{
+            font-size: 14px;
+            line-height: 21px;
+            color: #4A4A4A;
+        }
+    }
+
+    .transfer{
+        &__header{
+        font-weight: 400;
+        color: #A0B0B9;
+        }
+
+        &__value{
+            font-size: 14px;
+            line-height: 21px;
+            color: #4A4A4A;
+        }
+    }
+}
