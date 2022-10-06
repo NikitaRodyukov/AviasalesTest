@@ -12,21 +12,27 @@ export default function BtnFilters() {
     <div className={`${classes['btn-filters']}`}>
       <button
         type="button"
-        className={`${classes.btn} ${filter === 'PRICE' && classes['btn--active']}`}
+        className={`${classes.btn} ${
+          filter === 'PRICE' && classes['btn--active']
+        }`}
         onClick={() => dispatch(filterByPrice())}
       >
         Самый дешевый
       </button>
       <button
         type="button"
-        className={`${classes.btn} ${filter === 'TIME' && classes['btn--active']}`}
+        className={`${classes.btn} ${
+          filter === 'TIME' && classes['btn--active']
+        }`}
         onClick={() => dispatch(filterByDuration())}
       >
         Самый быстрый
       </button>
       <button
         type="button"
-        className={`${classes.btn} ${filter === 'OPTIMAL' && classes['btn--active']}`}
+        className={`${classes.btn} ${
+          filter === 'OPTIMAL' && classes['btn--active']
+        }`}
         onClick={() => dispatch(filterOptimal())}
       >
         Оптимальный

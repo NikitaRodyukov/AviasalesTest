@@ -1,17 +1,27 @@
 import { useSelector, useDispatch } from 'react-redux'
 
-import { showAll, showNoTransfer, showOneTransfer, showTwoTransfer, showThreeTransfer } from '../../actions'
+import {
+  showAll,
+  showNoTransfer,
+  showOneTransfer,
+  showTwoTransfer,
+  showThreeTransfer,
+} from '../../actions'
 
 import classes from './transfer-filters.module.scss'
 
 export default function TransferFilters() {
-  const { none, all, oneTrans, twoTrans, threeTrans } = useSelector((state) => state.numberOfTransfers)
+  const { none, all, oneTrans, twoTrans, threeTrans } = useSelector(
+    (state) => state.numberOfTransfers
+  )
   const toggleAll = none && oneTrans && twoTrans && threeTrans
   const dispatch = useDispatch()
 
   return (
     <aside className={`${classes['transfer-filters']} ${classes.filter}`}>
-      <div className={classes['transfer-filters__header']}>Количество пересадок</div>
+      <div className={classes['transfer-filters__header']}>
+        Количество пересадок
+      </div>
       <label className={classes.filter} htmlFor="checkbox-all">
         <input
           type="checkbox"

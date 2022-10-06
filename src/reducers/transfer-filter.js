@@ -1,4 +1,10 @@
-const initialFilterState = { none: false, all: false, oneTrans: false, twoTrans: false, threeTrans: false }
+const initialFilterState = {
+  none: false,
+  all: false,
+  oneTrans: false,
+  twoTrans: false,
+  threeTrans: false,
+}
 
 const transferFilterReducer = (state = initialFilterState, action) => {
   const { none, all, oneTrans, twoTrans, threeTrans } = state

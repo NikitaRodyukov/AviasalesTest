@@ -8,7 +8,11 @@ export default function Ticket() {
     <div className={`${classes.ticket__item} ${classes.item}`}>
       <div className={classes.item__header}>
         <div className={classes.item__header__price}>13 400 Р</div>
-        <img src={Logo} alt="" className={classes['item__header__company-logo']} />
+        <img
+          src={Logo}
+          alt=""
+          className={classes['item__header__company-logo']}
+        />
       </div>
       <TicketPath />
       <TicketPath />
