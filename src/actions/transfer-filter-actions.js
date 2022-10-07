@@ -1,15 +1,3 @@
-export const filterByPrice = () => ({
-  type: 'PRICE',
-})
-
-export const filterByDuration = () => ({
-  type: 'TIME',
-})
-
-export const filterOptimal = () => ({
-  type: 'OPTIMAL',
-})
-
 export const showAll = () => ({
   type: 'ALL',
 })
@@ -21,6 +9,7 @@ export const showNoTransfer = () => ({
 export const showOneTransfer = () => ({
   type: 'ONE_TRANSFER',
 })
+
 export const showTwoTransfer = () => ({
   type: 'TWO_TRANSFERS',
 })

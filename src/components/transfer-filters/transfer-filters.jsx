@@ -6,15 +6,15 @@ import {
   showOneTransfer,
   showTwoTransfer,
   showThreeTransfer,
-} from '../../actions'
+} from '../../actions/transfer-filter-actions'
 
 import classes from './transfer-filters.module.scss'
 
 export default function TransferFilters() {
-  const { none, all, oneTrans, twoTrans, threeTrans } = useSelector(
-    (state) => state.numberOfTransfers
+  const { straight, all, oneTrans, twoTrans, threeTrans } = useSelector(
+    (state) => state.transferFilter
   )
-  const toggleAll = none && oneTrans && twoTrans && threeTrans
+
   const dispatch = useDispatch()
 
   return (
@@ -27,8 +27,8 @@ export default function TransferFilters() {
           type="checkbox"
           name=""
           id="checkbox-all"
-          onClick={() => dispatch(showAll())}
-          checked={all || toggleAll}
+          onChange={() => dispatch(showAll())}
+          checked={all}
         />
         Все
         <span className={classes.checkmark} />
@@ -39,8 +39,8 @@ export default function TransferFilters() {
           type="checkbox"
           name=""
           id="checkbox-none"
-          onClick={() => dispatch(showNoTransfer())}
-          checked={none || all}
+          onChange={() => dispatch(showNoTransfer())}
+          checked={straight}
         />
         Без пересадок
         <span className={classes.checkmark} />
@@ -51,8 +51,8 @@ export default function TransferFilters() {
           type="checkbox"
           name=""
           id="checkbox-one"
-          onClick={() => dispatch(showOneTransfer())}
-          checked={oneTrans || all}
+          onChange={() => dispatch(showOneTransfer())}
+          checked={oneTrans}
         />
         1 пересадка
         <span className={classes.checkmark} />
@@ -63,8 +63,8 @@ export default function TransferFilters() {
           type="checkbox"
           name=""
           id="checkbox-two"
-          onClick={() => dispatch(showTwoTransfer())}
-          checked={twoTrans || all}
+          onChange={() => dispatch(showTwoTransfer())}
+          checked={twoTrans}
         />
         2 пересадки
         <span className={classes.checkmark} />
@@ -75,8 +75,8 @@ export default function TransferFilters() {
           type="checkbox"
           name=""
           id="checkbox-three"
-          onClick={() => dispatch(showThreeTransfer())}
-          checked={threeTrans || all}
+          onChange={() => dispatch(showThreeTransfer())}
+          checked={threeTrans}
         />
         3 пересадки
         <span className={classes.checkmark} />

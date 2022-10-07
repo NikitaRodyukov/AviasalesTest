@@ -1,11 +1,15 @@
 import { useSelector, useDispatch } from 'react-redux'
 
-import { filterByPrice, filterByDuration, filterOptimal } from '../../actions'
+import {
+  filterByPrice,
+  filterByDuration,
+  filterOptimal,
+} from '../../actions/main-filter-actions'
 
 import classes from './btn-filters.module.scss'
 
 export default function BtnFilters() {
-  const filter = useSelector((state) => state.currentFilter)
+  const filter = useSelector((state) => state.mainFilter)
   const dispatch = useDispatch()
 
   return (

@@ -1,11 +1,15 @@
 import { combineReducers } from 'redux'
 
-import filterReducer from './filter'
+import getTicketsReducer from './get-tickets'
+import getSearchIdReducer from './get-id'
+import mainFilterReducer from './filter'
 import transferFilterReducer from './transfer-filter'
 
 const allReducers = combineReducers({
-  currentFilter: filterReducer,
+  mainFilter: mainFilterReducer,
   transferFilter: transferFilterReducer,
+  searchId: getSearchIdReducer,
+  tickets: getTicketsReducer,
 })
 
 export default allReducers
