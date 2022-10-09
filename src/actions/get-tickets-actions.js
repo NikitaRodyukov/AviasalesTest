@@ -17,6 +17,7 @@ export const getTickets = (id) => async (dispatch) => {
     .then((response) => {
       if (!response.ok) {
         dispatch(getTickets(id))
+        throw new Error('Server Error')
       }
       return response.json()
     })
