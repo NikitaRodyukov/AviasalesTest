@@ -31,6 +31,15 @@ export default function TicketDesc({ segments }) {
   minsDate = formatTime(minsDate)
   hours = formatTime(hours)
   mins = formatTime(mins)
+  let word = ''
+  if (fligthStops === 1) {
+    word += 'Пересадка'
+  }
+  if (fligthStops >= 2) {
+    word += 'Пересадки'
+  } else {
+    word += 'Пересадок'
+  }
 
   return (
     <div className={`${classes.desc}`}>
@@ -47,10 +56,10 @@ export default function TicketDesc({ segments }) {
         <div className={classes.column__value}>{`${hours}ч ${mins}м`}</div>
       </div>
       <div className={`${classes.desc__column}`}>
-        <div
-          className={classes.column__header}
-        >{`${fligthStops} Пересадки`}</div>
-        <div className={classes.column__value}>{stops.join(',') || '/'}</div>
+        <div className={classes.column__header}>{`${fligthStops} ${word}`}</div>
+        <div className={classes.column__value}>
+          {stops.join(',') || 'Без пересадок'}
+        </div>
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-const mainFilterReducer = (state = 'PRICE', action) => {
+const mainFilterReducer = (state = null, action) => {
   switch (action.type) {
     case 'PRICE':
       return 'PRICE'
