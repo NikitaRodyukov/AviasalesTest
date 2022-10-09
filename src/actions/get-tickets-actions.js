@@ -17,7 +17,6 @@ export const getTickets = (id) => async (dispatch) => {
     .then((response) => {
       if (!response.ok) {
         dispatch(getTickets(id))
-        throw new Error('Server Error')
       }
       return response.json()
     })
@@ -36,10 +35,9 @@ export const getTickets = (id) => async (dispatch) => {
         })
       }
     })
+    .catch((e) => new Error(e.message))
 }
 
 export const loadingData = () => ({ type: 'DATA_LOAD_TRUE' })
 
 export const haveAllData = () => ({ type: 'DATA_LOAD_FINISHED' })
-
-export const errorWhileLoadingData = () => ({ type: 'DATA_LOAD_ERROR' })
