@@ -1,4 +1,4 @@
-.app{
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,12 +16,18 @@
   gap: 20px;
 }
 
-.logo{
+.logo {
   width: 100px;
   height: 100px;
   margin-bottom: 50px;
 }
 
-.main-content{
+.main-content {
   max-width: 600px;
+}
+
+@media (max-width: 580px) {
+  .main {
+    flex-direction: column;
+  }
 }

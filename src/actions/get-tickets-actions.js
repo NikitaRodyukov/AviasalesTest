@@ -37,7 +37,3 @@ export const getTickets = (id) => async (dispatch) => {
     })
     .catch((e) => new Error(e.message))
 }
-
-export const loadingData = () => ({ type: 'DATA_LOAD_TRUE' })
-
-export const haveAllData = () => ({ type: 'DATA_LOAD_FINISHED' })
